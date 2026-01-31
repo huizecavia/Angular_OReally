@@ -1,0 +1,13 @@
+h1 {
+  font-style: italic;
+  color: pink;
+  background-color: yellow;
+}
+
+p {
+    font-size: 38px;
+    line-height: 1.6;
+    color: purple;
+    background-color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
