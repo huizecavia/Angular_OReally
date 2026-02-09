@@ -16,6 +16,11 @@ export class ProductList {
   color: 'greenyellow', 
   width: '100px' 
   }; 
+
+  onAdded() {
+  alert(`${this.selectedProduct?.title} added to the cart!`);
+  }
+
   selectedProduct: Product | undefined;
   products: Product[] = [
         { id: 1, title: 'Keyboard' },

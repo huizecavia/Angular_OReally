@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Product } from '../product';
 
 @Component({
@@ -7,6 +7,15 @@ import { Product } from '../product';
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.css',
 })
+
+
+
 export class ProductDetailComponent {
   product = input<Product>();
+  added = output();
+
+  addToCart() {
+  this.added.emit();
+  }
 }
+
