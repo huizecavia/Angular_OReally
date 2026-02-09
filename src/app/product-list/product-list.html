@@ -5,11 +5,19 @@
   <h1>Products ({{products.length}})</h1>
   <ul class="pill-group">
   @for (product of products; track product.id; let variable1=$index; let variable2=$even) {
-    <li class="pill" [class.even]="variable2">{{variable1}} {{product.title}}</li>
+    <li class="pill" [class.even]="variable2" (click)="selectedProduct = product">{{variable1}} {{product.title}}</li>
   }</ul>
 } @else {
   <p>No products found!</p>
 }
+
+@if (selectedProduct) {
+  <p>You selected 1:
+    <strong>{{selectedProduct.title}}</strong>
+  </p>
+}
+
+<app-product-detail [product]="selectedProduct"></app-product-detail>
 
 <ul class="pill-group">
   @for (product of products; track product.id) {
@@ -17,7 +25,7 @@
       @switch (product.title) {
         @case ('Keyboard') { KA }
         @case ('Microphone') { MI }
-        @default { NO }
+        <!-- @default { NO } -->
       }
       {{product.title}}
     </li>

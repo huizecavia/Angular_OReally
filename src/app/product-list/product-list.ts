@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
 import { Product } from '../product';
+import { ProductDetailComponent } from '../product-detail/product-detail';
 
 @Component({
   selector: 'app-product-list',
-  imports: [],
+  imports: [ProductDetailComponent],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
 export class ProductList {
   product = ' none'
   myText = 'This is my product list component'
+
+  currentStyles = { 
+  color: 'greenyellow', 
+  width: '100px' 
+  }; 
+  selectedProduct: Product | undefined;
   products: Product[] = [
         { id: 1, title: 'Keyboard' },
     { id: 2, title: 'Microphone' },
