@@ -17,8 +17,8 @@ export class ProductList {
   width: '100px' 
   }; 
 
-  onAdded() {
-  alert(`${this.selectedProduct?.title} added to the cart!`);
+  onAdded(product: Product) {
+  alert(`${product.title} ist added to the cart!`);
   }
 
   selectedProduct: Product | undefined;

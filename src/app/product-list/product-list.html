@@ -12,9 +12,11 @@
 }
 
 <app-product-detail 
-[product]="selectedProduct"
-(added)="onAdded()"
+  #productDetail
+  [product]="selectedProduct"
+  (added)="onAdded($event)"
 ></app-product-detail>
+
 
 <ul class="pill-group">
   @for (product of products; track product.id) {
@@ -30,3 +32,5 @@
     <p>No products found!</p>
   }
 </ul>
+
+<span>{{productDetail}}</span>
