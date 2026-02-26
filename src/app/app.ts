@@ -11,8 +11,12 @@ import { DUMMY_USERS } from './dummy-users';
 })
 export class App {
   users = DUMMY_USERS;
+<<<<<<< HEAD
 
   onSelectUser(id: string) {
     console.log('Selected user: ' + id)
   }
+=======
+  hallo = "Hi";
+>>>>>>> fac4f2333050f29398e53a1ba4387e55eff95aef
 }

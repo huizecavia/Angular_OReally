@@ -1,6 +1,7 @@
 <app-header></app-header>
 
 <main>
+<<<<<<< HEAD
    <ul id="users">
       <li>
          <app-user [id]="users[0].id" [avatar]="users[0].avatar" [name]="users[0].name" (select)="onSelectUser($event)"></app-user>
@@ -15,4 +16,20 @@
          <app-user [id]="users[3].id" [avatar]="users[3].avatar" [name]="users[3].name" (select)="onSelectUser($event)"></app-user>
       </li>
    </ul>
+=======
+    <ul id="users">
+        <li>
+           <app-user [avatar]="users[0].avatar" [name]="users[0].name" [hoi]="hallo"></app-user>
+        </li>
+        <li>
+           <app-user [avatar]="users[1].avatar" [name]="users[1].name" [hoi]="hallo"></app-user>
+        </li>        
+        <li>
+           <app-user [avatar]="users[2].avatar" [name]="users[2].name" [hoi]="hallo"></app-user>
+        </li>
+        <li>
+           <app-user [avatar]="users[3].avatar" [name]="users[3].name" [hoi]="hallo"></app-user>
+        </li>
+    </ul>
+>>>>>>> fac4f2333050f29398e53a1ba4387e55eff95aef
 </main>
